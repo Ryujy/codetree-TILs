@@ -12,7 +12,7 @@ public class Main {
         for (int i=0; i<bracket.length; i++){
             if (bracket[i].equals("(")){
                 stack.push("(");
-            } else if(stack.empty){
+            } else if(stack.empty()){
                 System.out.println("No");
                 return;
             }
