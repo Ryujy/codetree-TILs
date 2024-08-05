@@ -13,6 +13,7 @@ public class Main {
             if (bracket[i].equals("(")){
                 stack.push("(");
             } else {
+                if(stack.empty()) continue;
                 stack.pop();
             }
         }
