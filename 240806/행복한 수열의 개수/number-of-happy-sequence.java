@@ -29,12 +29,12 @@ public class Main {
             for (int j=0; j<n; j++){
                 if (map[i][j+1] == map[i][j]){
                     happyCnt++;
-                    if (happyCnt >= m-1){
-                        cnt++;
-                        continue L;
-                    }
                 } else {
                     happyCnt = 0;
+                }
+                if (happyCnt >= m-1){
+                    cnt++;
+                    continue L;
                 }
             }
         }
