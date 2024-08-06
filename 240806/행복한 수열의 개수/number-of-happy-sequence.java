@@ -24,7 +24,7 @@ public class Main {
         int cnt = 0;
 
         // 가로 확인
-        for (int i=0; i<n; i++){
+        L : for (int i=0; i<n; i++){
             int happyCnt = 1;
             for (int j=1; j<n; j++){
                 if (map[i][j-1] == map[i][j]){
@@ -34,12 +34,13 @@ public class Main {
                 }
                 if (happyCnt >= m){
                     cnt++;
+                    continue L;
                 }
             }
         }
 
         // 세로 확인
-        for (int i=0; i<n; i++){
+        L : for (int i=0; i<n; i++){
             int happyCnt = 1;
             for (int j=1; j<n; j++){
                 if (map[j-1][i] == map[j][i]){
@@ -50,6 +51,7 @@ public class Main {
             }
             if (happyCnt >= m){
                 cnt++;
+                continue L;
             }
         }
 
